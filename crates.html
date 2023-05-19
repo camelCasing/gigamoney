@@ -1,0 +1,37 @@
+<html>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>    
+
+    <head>
+        <title>crates | gigamoney</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/logo.png">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <img style="width: 3.5%;" src="images/logo.png" alt="">
+            <h1 style="width: 10%;" class="navbar-title" onclick="goToPage('home.html')">gigamoney</h1>
+
+            <h1 id="username-display" style="position: relative;;top: -215%;width: 30%;left: 56%;text-align: right;color: #fff;opacity: 0%;">username</h1>
+            <button style="top: -280%;left: 87.5%;" id="login-button" onclick="goToPage('login.html')" class="navbar-button">Login</button>
+            <button style="top: -280%;left: 87.5%;display: none;" id="logout-button" onclick="logout()" class="navbar-button">Logout</button>
+        
+            <div class="cash-money-display" id="cash-money-display"></div>
+        </div>
+
+        <div id="case-grid-container" style="z-index: 1;position: absolute;left: 37.5%;width: 25%;background-color: #252a46;height: 70%;top: 20%;border-radius: 5px;display: flex;flex-wrap: wrap;justify-content: center;">
+            <div style="display:none" id="example-crate-contain" class="case-grid">
+                Example Crate
+            </div>
+        </div>
+
+        <div style="opacity:0%;;transition: 0.1s;" class="crate-opening-div" id="crate-opening-div">
+            Item
+        </div>
+
+        <!--<p style="background-image: url(images/background.png);width: 100%;height: 100%;opacity: 1%;z-index: -1;position: absolute;"></p> -->
+    </body>
+
+    <script src="scripts/script.js"></script>
+</html>

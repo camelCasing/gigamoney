@@ -1,0 +1,403 @@
+@font-face {
+    font-family: "comic-sand";
+    src: url(fonts/comic-sand.ttf);
+}
+
+@font-face {
+    font-family: "popinz";
+    src: url(fonts/popinz.ttf);
+}
+
+@font-face {
+    font-family: "popinz-bold";
+    src: url(fonts/popinz-bold.ttf);
+}
+
+body {
+    background-color: #1c2433;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    height: 7.5%;
+    background-color: #2e3c55;
+    font-family: "popinz";
+    filter: drop-shadow(0 0 7.5px #00000050);
+    font-size: 14px;
+}
+
+.navbar-title {
+    left: 4%;
+    position: relative;
+    color: #fff;
+    top: -115%;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.navbar-title:hover {
+    color: #999cb9;
+}
+
+.navbar-button {
+    position: relative; /* Use position: absolute instead of position: relative */
+    width: 10%;
+    height: 70%;
+    top: 50%; /* Change top: 20%; to top: 50%; */
+    left: 0%;
+    transform: translateY(-50%); /* Add this line */
+    cursor: pointer;
+    background-color: #32b611;
+    border-width: 0;
+    color: #ffffff;
+    font-size: larger;
+    font-family: "popinz";
+    transition: 0.1s;
+    border-radius: 3.5px;
+}
+
+.navbar-button-inactive {
+    position: relative; /* Use position: absolute instead of position: relative */
+    width: 10%;
+    height: 70%;
+    top: 50%; /* Change top: 20%; to top: 50%; */
+    left: 0%;
+    transform: translateY(-50%); /* Add this line */
+    cursor:not-allowed;
+    background-color: #1d6d0a;
+    border-width: 0;
+    color: #ffffff9f;
+    font-size: larger;
+    font-family: "popinz";
+    transition: 0.1s;
+    border-radius: 3.5px;
+}
+
+
+.navbar-button:hover {
+    background-color: #38c914;
+    color: #ffffff;
+    filter: drop-shadow(0 0 2.5px #40e417);
+}
+
+input {
+    font-family: "comic-sand";
+    font-size: 20px;
+    border-width: 0;
+    text-align:center;
+    border-radius: 3.5px;
+}
+
+.mine-button {
+    width: 10%;
+    cursor: pointer;
+    transition: 0.1s;
+    display: none;
+    flex-basis: calc(20% - 10px);
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.mine-button-alt {
+    width: 10%;
+    transition: 0.1s;
+    display: none;
+    flex-basis: calc(19.75% - 9px);
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.mine-button:hover {
+   opacity: 75%;
+}
+
+.mine-button-w {
+    filter: drop-shadow(0 0 5px #3766ff);
+}
+
+.mine-button-l {
+    filter: drop-shadow(0 0 5px #ff2a2a);
+}
+
+.comment {
+    color: #ddedffb9;
+    font-family: "popinz";
+    z-index: 1;
+    position: absolute;
+}
+
+.mine-button-tint {
+    opacity: 20%;
+}
+
+.case-grid {
+    width: 40%;
+    height: 20%;
+    background-color: #394069;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+    font-family: "comic-sand";
+    color: #fff;
+    text-align: center;
+}
+
+.case-grid:hover {
+    background-color: #4e578b;
+}
+
+.crate-opening-div {
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    background-color: #2b3150;
+    top: 30%;
+    height: 20%;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 10px #0000006e);
+    font-size: 50px;
+    color: #d8d5fc;
+    font-family: "comic-sand";
+    text-align: center;
+}
+
+.cash-money-display {
+    background-color: #242e42;
+    position: relative;
+    left: 45%;
+    top: -384.5%;
+    width: 10%;
+    height: 70%;
+    text-align: center;
+    font-size: 24px;
+    color: #ffc267;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cash-money-drop-down {
+    background-color: #374764;
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    color: #ffc267;
+    border-radius: 3.5px;
+    cursor: pointer;
+    top: -380%;
+    width: 10%;
+    left: 45%;
+    height: 250%;
+    z-index:2;
+}
+
+.game-card {
+    z-index: 1;
+    position: relative;
+    background-color: #ffffff;
+    width: 14%;
+    height: 35%;
+    border-radius: 5px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    opacity: 75%;
+}
+
+.game-card-title {
+    color: #fff;
+    font-family: "popinz-bold";
+    filter: drop-shadow(0 0 4px #00000091);
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    top: 60%;
+    position: relative;
+}
+
+.game-card-img {
+    width: 100%;
+    position: relative;
+    top: -35.5%;
+    z-index: -1;
+    filter: drop-shadow(0 0 5px #00000059);
+    height: 100%;
+    border-radius: 5px;
+    left: -0%;
+}
+
+.game-board {
+    background-color: #151b25;
+    width: 50%;
+    height: 65%;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 25%;
+    border-radius: 5px;
+}
+
+.game-board-second {
+    background-color: #1d253300;
+    width: 50%;
+    height: 65%;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 25%;
+    border-radius: 5px;
+}
+
+.game-board-title {
+    color: #fff;
+    font-family: "popinz";
+    position: absolute;
+    left: 2.5%;
+    top: -1%;
+    font-size: 24px;
+}
+
+.game-board-description {
+    color: #ffffff15;
+    font-family: "popinz";
+    position: absolute;
+    left: 2.5%;
+    font-size: 16px;
+    top: 105%;
+}
+
+.gem {
+    width: 20%;
+    height: 20%;
+    top: 40%;
+    position: relative;
+    opacity: 0%;
+    transition: 0.25s;
+}
+
+.spinner {
+    width: 60%;
+    height: 60%;
+    top: 15%;
+    position: relative;
+}
+
+.notification {
+    background-color: #151b25;
+    transition: 1s;
+    border-radius: 5px;
+    left: 2%;
+    top: 10%;
+    position: absolute;
+    z-index: 1;
+    width: 17.5%;
+    height: 12.5%;
+    filter: drop-shadow(0 0 5px #00000054);
+}
+
+.notification-title {
+    color: #fff;
+    font-family: "popinz-bold";
+    left: 5%;
+    position: relative;
+    top: 1.25%;
+    font-size: 16px;
+}
+
+.notification-description {
+    color: #ffffff96;
+    font-family: "popinz";
+    left: 5%;
+    position: relative;
+    top: 7.5%;
+    font-size: 12px;
+}
+
+.playing-card {
+    background-color: #fff;
+    width: 25%;
+    height: 38.5%;
+    border-radius: 5px;
+    top: 25%;
+    position: relative;
+    transition: 0.5s;
+}
+
+.playing-card-text-1 {
+    color: #000;
+    font-family: "popinz";
+    font-size: 20px;
+    position: absolute;
+    top: -7%;
+    left: 2%;
+}
+
+.playing-card-text-2 {
+    color: #000;
+    font-family: "popinz";
+    font-size: 20px;
+    position: relative;
+    top: 80%;
+    left: 79%;
+}
+
+.nav-bar-button-list {
+    width: 15%;
+    position: relative;
+    top: -452.5%;
+    left: 56%;
+    height: 65%;
+}
+
+.nav-bar-button-list-button {
+    width: 17%;
+    height: 100%;
+    cursor: pointer;
+    border-width: 0;
+    border-radius: 5px;
+    transition: 0.25s;
+    position: relative;
+}
+
+.nav-bar-button-list-button-img {
+    width: 125%;
+    left: -12.5%;
+    position: relative;
+}
+
+.nav-bar-button-list-button:hover {
+    opacity: 75%;
+}
+
+.promo-code-box {
+    background-color: #29354b;
+    width: 15%;
+    height: 15%;
+    border-radius: 5px;
+    left: 42.5%;
+    position: absolute;
+    top: 25%;
+    z-index: 10;
+    filter: drop-shadow(0 0 25px #000000fd);
+}
+
+.promo-code-redeem {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 35%;
+    cursor: pointer;
+    border-radius: 5px;
+    border-width: 0;
+    transition: 0.25s;
+    background-color: #74ff34fd;
+}
+
+.promo-code-redeem:hover {
+    opacity: 75%;
+    filter: drop-shadow(0 0 5px #74ff34fd);
+}

@@ -1,0 +1,57 @@
+<html>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>    
+
+    <head>
+        <title>whitejack | gigamoney</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/logo.png">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <img style="width: 3.5%;" src="images/logo.png" alt="">
+            <h1 style="width: 10%;" class="navbar-title" onclick="goToPage('home.html')">gigamoney</h1>
+
+            <h1 id="username-display" style="position: relative;;top: -215%;width: 30%;left: 56%;text-align: right;color: #fff;opacity: 0%;">username</h1>
+            <button style="top: -280%;left: 87.5%;" id="login-button" onclick="goToPage('login.html')" class="navbar-button">Login</button>
+            <button style="top: -280%;left: 87.5%;display: none;" id="logout-button" onclick="logout()" class="navbar-button">Logout</button>
+        
+            <div class="cash-money-display" id="cash-money-display"></div>
+        </div>
+
+        <!-- <h1 style="position: absolute;;top: 10\%;width: 40%;left: 30%;text-align: center;color: #fff;opacity: 100%;font-family: 'comic-sand';z-index: 1;">mines</h1> -->
+
+        <div class="game-board">
+            <h1 class="game-board-title">Whitejack</h1>
+            <h1 class="game-board-description">Whitejack on gigamoney is so cool, you get 2 cards, you can hit up to 2 times to get a new card for 25% of your initial bet which will be taken from your balance and if the value of your hand exeeds 10 you will be in profit and gain your initial bet multiplied by the value of your hand (each integer per value being worth 10%) upon standing</h1>
+        
+            <div class="game-board-second">
+                
+            </div>
+        </div>
+
+        <div style="width: 60%;left: 20%;height: 50%;position: absolute;z-index: 1;">
+            <!-- The Game -->
+            <input onchange="setMinimalInput(document.getElementById('bet-amount'), 0.1, 100)" class="inputs-to-save" type="number" min="1" max="24" id="bet-amount" value="1" style="left: 11%;width: 20%;top: 50%;position: relative;z-index: 1;height: 9%;" type="text" placeholder="mines">
+            <h3 style="left: 11%;top: 38%;" class="comment">Bet Amount</h3>
+            <button id="blackjack-confirmation" style="left: -9.5%;width: 20%;top: 92.5%;height: 10%;position: relative;z-index: 1;" id="logout-button" onclick="playWhitejack(document.getElementById('bet-amount').value)" class="navbar-button">Bet</button>
+            <button id="blackjack-hit" style="left: -30%;width: 20%;top: 67.5%;height: 10%;position: relative;z-index: 1;" id="logout-button" class="navbar-button-inactive">Hit -0.000p</button>
+            <button id="blackjack-stand" style="left: -50.3%;width: 20%;top: 80%;height: 10%;position: relative;z-index: 1;" id="logout-button" class="navbar-button-inactive">Stand +0.000p</button>
+        
+            <div id="blackjack-container" style="border-radius: 5px;;width: 50%;left: 37.5%;position: relative;height: 120%;top: 20%;background-color: #212b3d;display: flex;flex-wrap: wrap;justify-content: center;">
+                <div style="display: none;" id="playing-card-template" class="playing-card">
+                    <h1 id="playing-card-text-1" class="playing-card-text-1">11</h1>
+                    <h1 id="playing-card-text-2" class="playing-card-text-2">11</h1>
+                </div>
+
+                <h1 id="win-text" style="font-size: 16px;left: 25%;width: 50%;text-align: center;top: 75%;color: #ffffffb6;" class="game-board-title">Win 0.000p</h1>
+                <h1 id="bet-text" style="font-size: 16px;left: 25%;width: 50%;text-align: center;top: 80%;color: #ffffffb6;" class="game-board-title">Bet 0.000p</h1>
+            </div>
+        </div>
+
+        <!--<p style="background-image: url(images/background.png);width: 100%;height: 100%;opacity: 1%;z-index: -1;position: absolute;"></p> -->
+    </body>
+
+    <script src="scripts/script.js"></script>
+</html>\

@@ -1149,3 +1149,13 @@ function manageAllAccounts() {
   });
 })
 }
+
+//user-menu-nav-dropdown
+function toggleUserMenu() {
+  var userMenuButton = document.getElementById('user-menu-button');
+  var userMenu = document.getElementById('user-menu');
+  var expanded = userMenuButton.getAttribute('aria-expanded') === 'true';
+
+  userMenuButton.setAttribute('aria-expanded', !expanded);
+  userMenu.classList.toggle('hidden');
+}
